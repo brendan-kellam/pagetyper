@@ -1,0 +1,3943 @@
+
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/QAPage">
+
+<head>
+
+<title>HTTP GET request in JavaScript? - Stack Overflow</title>
+    <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com"/>
+    <meta property="og:type" content="website" />
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded" />
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="HTTP GET request in JavaScript?" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I need to do an HTTP GET request in JavaScript. What&#39;s the best way to do that?
+
+I need to do this in a Mac OS X dashcode widget." />
+    <meta property="og:url" content="http://stackoverflow.com/questions/247483/http-get-request-in-javascript"/>
+    <link rel="canonical" href="http://stackoverflow.com/questions/247483/http-get-request-in-javascript" />
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.sstatic.net/Js/stub.en.js?v=17b9af6e9349"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/stackoverflow/all.css?v=a658619ca39f">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;HTTP GET request in JavaScript?&#39;" href="/feeds/question/247483">
+            <meta name="twitter:app:country" content="US" />
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:iphone" content="871299723" />
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/247483/http-get-request-in-javascript" />
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:ipad" content="871299723" />
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/247483/http-get-request-in-javascript" />
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/247483/http-get-request-in-javascript">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:1,shownCommentCount:1,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:247483});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '247483');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text', true); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1491095948,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"childUrl":"https://meta.stackoverflow.com","enableSocialMediaInSharePopup":true,"protocol":"http"},"user":{"fkey":"6c1d71a622509b1d062b9358b2435b0f","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"canSeeNewHeaderDesign":true},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"2742d0a57b8f","js/moderator.en.js":"a21527cce4e3","js/full-anon.en.js":"7f5ab2e0b6de","js/full.en.js":"661193b13659","js/wmd.en.js":"e9e193273297","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"c37948fe0a99","js/help.en.js":"a2f92aacc060","js/tageditor.en.js":"9c6df10dabc4","js/tageditornew.en.js":"e0c4c9b047d2","js/inline-tag-editing.en.js":"2ddfa79492e7","js/revisions.en.js":"8f22ba768cac","js/review.en.js":"e8bbf04818b6","js/tagsuggestions.en.js":"78eee7c19ab2","js/post-validation.en.js":"a4307119541f","js/explore-qlist.en.js":"d33e3ab2f2e0","js/events.en.js":"94f16a409a23","js/keyboard-shortcuts.en.js":"bf8e884c225e","js/external-editor.en.js":"dec8b7cab79e","js/adops.en.js":"9a6a7812a212","js/external-editor.en.js":"dec8b7cab79e","js/snippet-javascript.en.js":"9d345bbe4762","js/snippet-javascript-codemirror.en.js":"ab5fec05fc11"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    <noscript id="noscript-css"><style type="text/css">body,.so-header{margin-top:1.9em}</style></noscript>
+</head>
+<body class="question-page new-topbar">
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        <iframe id="adzerk-user-match" width="0" height="0" frameborder="0" scrolling="no" onload="window.AUMIframeDone=true"
+                src="https://ssum-sec.casalemedia.com/usermatch?s=183712&amp;cb=https%3A%2F%2Fengine.adzerk.net%2Fudb%2F22%2Fsync%2Fi.gif%3FpartnerId%3D1%26userId%3D"
+                style="display: none;" marginheight="0" marginwidth="0"></iframe>
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+<header class="so-header js-so-header _fixed">
+    <div class="-container">
+        <div class="-main">            
+            <a href="http://stackoverflow.com" class="-logo ">
+                <span class="-img">Stack Overflow</span>
+            </a>
+
+            <nav class="navigation" role="navigation" aria-label="site navigation">
+                <ol class="-list">
+                        <li class="-item _current">
+        <a id="nav-questions" href="/questions" class="-link js-gps-track" 
+            data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+    </li>
+
+    <li class="-item">
+        <a id="nav-jobs" href="/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track" 
+            data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Jobs</a>
+    </li>
+                        <li class="-item">
+        <a id="nav-docs" href="/documentation" class="-link js-gps-track" 
+            data-gps-track="top_nav.click({is_current:false, location:2, destination:7})">Documentation <small class='beta-badge'>beta</small></a>
+    </li>
+                        <li class="-item">
+        <a id="nav-tags" href="/tags" class="-link js-gps-track" 
+            data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+    </li>
+
+                        <li class="-item">
+        <a id="nav-users" href="/users" class="-link js-gps-track" 
+            data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+    </li>
+
+                </ol>
+            </nav>
+
+            <form id="search" action="/search" method="get" class="searchbar" autocomplete="off" role="search">
+                <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"/></svg>
+                <input name="q" type="text" placeholder="Search..." value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field" />
+                <button type="submit" class="btn js-search-submit">
+                    <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"/></svg>
+                </button>
+            </form>
+
+        </div>
+        
+
+
+<div class="-actions">
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="http://stackoverflow.com">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+            <a href="http://stackoverflow.com/help" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:14 })"
+>help</a>
+                    <a href="http://chat.stackoverflow.com" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+            </div>
+
+    <a href="http://stackoverflow.com"
+       class="current-site-link site-link js-gps-track"
+       data-id="1"
+       data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+    <a href="https://meta.stackoverflow.com"
+       class="site-link js-gps-track"
+       data-id="552"
+       data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:10 })"
+>Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f247483%2fhttp-get-request-in-javascript" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:11 })"
+>log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="https://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="https://stackoverflow.blog" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="https://meta.stackoverflow.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+
+        </div>
+        <ol class="-list">
+            
+    <li class="-item"><a href="#" class="-link js-help-button" title="Help Center and other resources">
+        <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M9 0a9 9 0 1 0 .001 18.001A9 9 0 0 0 9 0zm.812 13.126c-.02.716-.55 1.157-1.238 1.137-.659-.02-1.177-.49-1.157-1.209.02-.715.566-1.17 1.225-1.15.691.021 1.194.507 1.17 1.222zm1.956-5.114c-.168.237-.546.542-1.02.912l-.527.361c-.257.197-.417.43-.502.695-.044.141-.076.507-.084.752-.004.048-.032.156-.181.156H7.883c-.165 0-.185-.096-.18-.144.023-.667.12-1.218.397-1.66.374-.594 1.426-1.221 1.426-1.221.161-.12.286-.25.382-.39.177-.24.321-.51.321-.8 0-.333-.08-.65-.293-.915-.249-.31-.518-.458-1.036-.458-.51 0-.808.257-1.021.594-.213.338-.177.735-.177 1.097H5.746c0-1.366.357-2.238 1.112-2.752.51-.35 1.162-.502 1.921-.502.996 0 1.788.184 2.487.715.647.49.988 1.181.988 2.113 0 .575-.2 1.057-.486 1.447z" /></svg>
+    </a></li>
+                <li class="-item">
+        <a href="https://stackexchange.com" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 167 Stack Exchange sites">
+            <svg viewBox="0 0 18 19" width="18" height="19" role="icon"><path fill-rule="evenodd" d="M0 14a2 2 0 0 0 2 2h10v3l3-3h1a2 2 0 0 0 2-2v-2H0v2zM16 0H2a2 2 0 0 0-2 2v2h18V2a2 2 0 0 0-2-2zM0 6h18v4H0V6z" /></svg>
+        </a>
+    </li>
+
+
+        </ol>
+    </nav>
+        <div class="-ctas">
+                    <a href="https://stackoverflow.com/users/login?ssrc=head&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f247483%2fhttp-get-request-in-javascript" class="login-link btn-clear" rel="nofollow">Log In</a>
+                        <a href="https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect" class="login-link btn" rel="nofollow">Sign Up</a>
+
+        </div>
+</div>
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function () { StackExchange.topbar.init(); });
+            StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+    <div class="container">
+        
+
+
+        <div id="content" class="snippet-hidden">
+
+
+
+            
+
+<div itemscope itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+<div id="herobox" class="alternate">
+    <div class="test"></div>
+        <div id="close">
+            <a title="click to minimize"><span>x</span> Dismiss</a>
+        </div>
+            <div class="content">
+            <div class="blurb" style="margin-bottom: 10px;">Improve your security with</div>
+            <b>Dance Dance Authentication</b>
+            <div class="separator"></div>
+            <div class="blurb">
+                Now available on Stack Overflow.
+            </div>
+            <a href="https://stackoverflow.blog/2017/03/30/stack-overflow-unveils-next-steps-computer-security" class="button">Learn more</a>
+        </div>
+</div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+        
+        $('#herobox #close').click(function () {
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>     <div id="question-header">
+                <h1 itemprop="name"><a href="/questions/247483/http-get-request-in-javascript" class="question-hyperlink">HTTP GET request in JavaScript?</a></h1>
+
+            
+<div class="aside-cta" role="navigation" aria-label="ask new question">
+    <a href="/questions/ask" class="btn-outlined">Ask Question</a>
+</div>
+    </div>
+      <div id="mainbar" role="main" aria-label="question and answers">
+
+      
+
+<div class="question" data-questionid="247483"  id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk977547328",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk977547328"></div>    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="247483">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">443</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="#">favorite</a>
+        <div class="favoritecount"><b>161</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I need to do an <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" rel="noreferrer">HTTP GET</a> request in JavaScript. What's the best way to do that?</p>
+
+<p>I need to do this in a Mac OS X dashcode widget.</p>
+    </div>
+    <div class="post-taglist">
+        <a href="/questions/tagged/javascript" class="post-tag" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="/questions/tagged/http" class="post-tag" title="show questions tagged &#39;http&#39;" rel="tag">http</a> <a href="/questions/tagged/get" class="post-tag" title="show questions tagged &#39;get&#39;" rel="tag">get</a> <a href="/questions/tagged/dashcode" class="post-tag" title="show questions tagged &#39;dashcode&#39;" rel="tag">dashcode</a> 
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/q/247483" title="short permalink to this question" class="short-link" id="link-post-247483">share</a><span class="lsep">|</span><a href="/posts/247483/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/247483/revisions" title="show all edits to this post">edited <span title="2014-01-27 13:50:07Z" class="relativetime">Jan 27 '14 at 13:50</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/63550/peter-mortensen"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/RIZKi.png?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/63550/peter-mortensen">Peter Mortensen</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 10,931" dir="ltr">10.9k</span><span title="15 gold badges"><span class="badge1"></span><span class="badgecount">15</span></span><span title="76 silver badges"><span class="badge2"></span><span class="badgecount">76</span></span><span title="109 bronze badges"><span class="badge3"></span><span class="badgecount">109</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2008-10-29 16:31:34Z" class="relativetime">Oct 29 '08 at 16:31</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/26948/mclaughlinj"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/eede55a760eef0fd812020c6d96ec061?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/26948/mclaughlinj">mclaughlinj</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,186</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="21 silver badges"><span class="badge2"></span><span class="badgecount">21</span></span><span title="36 bronze badges"><span class="badge3"></span><span class="badgecount">36</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</div>
+</td>
+        </tr>
+                    
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-247483" class="comments ">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-9336008" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Note that this is subject to the Same Origin Policy. <a href="http://en.wikipedia.org/wiki/Same_origin_policy" rel="nofollow noreferrer">en.wikipedia.org/wiki/Same_origin_policy</a></span>
+                    &ndash;&nbsp;<a href="/users/11236/ripper234"
+                       title="71,935 reputation"
+                       class="comment-user">ripper234</a>
+                <span class="comment-date" dir="ltr"><span title="2011-10-06 21:10:02Z" class="relativetime-clean">Oct 6 '11 at 21:10</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-247483" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>        </table>
+</div>
+
+      <div id="answers">
+
+        <a name="tab-top"></a>
+        <div id="answers-header">
+          <div class="subheader answers-subheader">
+            <h2>
+                20 Answers
+                                <span style="display:none;" itemprop="answerCount">20</span>
+            </h2>
+            <div>
+              <div id="tabs">
+        <a href="/questions/247483/http-get-request-in-javascript?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="/questions/247483/http-get-request-in-javascript?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="/questions/247483/http-get-request-in-javascript?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+            </div>
+          </div>    
+        </div>    
+
+
+
+
+  
+<a name="4033310"></a>
+<div id="answer-4033310" class="answer accepted-answer" data-answerid="4033310"  itemscope itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="4033310">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">776</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You can use functions provided by the hosting environment through javascript:</p>
+
+<pre><code>function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+</code></pre>
+
+<p>However, synchronous requests are discouraged, so you might want to use this instead:</p>
+
+<pre><code>function httpGetAsync(theUrl, callback)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 &amp;&amp; xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
+}
+</code></pre>
+
+<blockquote>
+  <p>Note: Starting with Gecko 30.0 (Firefox 30.0 / Thunderbird 30.0 / SeaMonkey 2.27), <strong>synchronous requests on the main thread have been deprecated</strong> due to the negative effects to the user experience.</p>
+</blockquote>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/4033310" title="short permalink to this answer" class="short-link" id="link-post-4033310">share</a><span class="lsep">|</span><a href="/posts/4033310/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/4033310/revisions" title="show all edits to this post">edited <span title="2015-11-08 01:45:39Z" class="relativetime">Nov 8 '15 at 1:45</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/576767/f%c3%a9lix-gagnon-grenier"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/37i5y.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/576767/f%c3%a9lix-gagnon-grenier">F&#233;lix Gagnon-Grenier</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">4,220</span><span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span><span title="29 silver badges"><span class="badge2"></span><span class="badgecount">29</span></span><span title="44 bronze badges"><span class="badge3"></span><span class="badgecount">44</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2010-10-27 12:43:51Z" class="relativetime">Oct 27 '10 at 12:43</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/488828/joan"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/0cfbb0d86bb72fc25ed19c06e54278e6?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/488828/joan">Joan</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">7,784</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-4033310" class="comments ">
+        <table>
+                <tbody data-remaining-comments-count="4"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-28222906" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This one is neat, however note that IE 10 pops up a security alert when using this and trying to access url in a different domain than the page&#39;s domain</span>
+                    &ndash;&nbsp;<a href="/users/1057791/borntocode"
+                       title="3,131 reputation"
+                       class="comment-user">BornToCode</a>
+                <span class="comment-date" dir="ltr"><span title="2013-09-30 09:37:04Z" class="relativetime-clean">Sep 30 '13 at 9:37</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-37814912" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Well, of course Javascript has it built in, or how could any Javascript library offer a convenience method for it?  The difference being that the convenience methods offer, well, convenience, and a clearer, simpler syntax.</span>
+                    &ndash;&nbsp;<a href="/users/28558/pistos"
+                       title="14,023 reputation"
+                       class="comment-user">Pistos</a>
+                <span class="comment-date" dir="ltr"><span title="2014-06-26 19:53:43Z" class="relativetime-clean">Jun 26 '14 at 19:53</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-37888782" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="warm">14</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Why the XML` prefix?</span>
+                    &ndash;&nbsp;<a href="/users/435605/alikelzin-kilaka"
+                       title="12,979 reputation"
+                       class="comment-user">AlikElzin-kilaka</a>
+                <span class="comment-date" dir="ltr"><span title="2014-06-29 18:13:31Z" class="relativetime-clean">Jun 29 '14 at 18:13</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-39934085" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="warm">7</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">For a library-less asynchronous solution see tggagne&#39;s answer below.</span>
+                    &ndash;&nbsp;<a href="/users/214446/mb21"
+                       title="11,855 reputation"
+                       class="comment-user">mb21</a>
+                <span class="comment-date" dir="ltr"><span title="2014-08-29 14:32:29Z" class="relativetime-clean">Aug 29 '14 at 14:32</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-62492345" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@AlikElzin-kilaka Actually all the answers above are off the mark (infact the linked W3 docs explains &quot;each component of this name is potentially misleading&quot;). Correct answer? its just badly named <a href="http://stackoverflow.com/questions/12067185/why-is-it-called-xmlhttprequest" title="why is it called xmlhttprequest">stackoverflow.com/questions/12067185/&hellip;</a></span>
+                    &ndash;&nbsp;<a href="/users/225813/ashley-coolman"
+                       title="2,131 reputation"
+                       class="comment-user">Ashley Coolman</a>
+                <span class="comment-date" dir="ltr"><span title="2016-05-28 11:58:25Z" class="relativetime-clean">May 28 '16 at 11:58</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-4033310" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link  dno"
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   ></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href=# onclick="">show <b>4</b> more comments</a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1351297327",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1351297327"></div>
+  
+<a name="247511"></a>
+<div id="answer-247511" class="answer" data-answerid="247511"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="247511">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">144</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p><a href="http://docs.jquery.com/Ajax/jQuery.get#examples" rel="noreferrer">In jQuery</a>:</p>
+
+<pre><code>$.get(
+    "somepage.php",
+    {paramOne : 1, paramX : 'abc'},
+    function(data) {
+       alert('page content: ' + data);
+    }
+);
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/247511" title="short permalink to this answer" class="short-link" id="link-post-247511">share</a><span class="lsep">|</span><a href="/posts/247511/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/247511/revisions" title="show all edits to this post">edited <span title="2008-10-30 04:09:45Z" class="relativetime">Oct 30 '08 at 4:09</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/9021/nickf"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/f092dfd45793e9483281d4205b674823?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/9021/nickf">nickf</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 306,092" dir="ltr">306k</span><span title="154 gold badges"><span class="badge1"></span><span class="badgecount">154</span></span><span title="537 silver badges"><span class="badge2"></span><span class="badgecount">537</span></span><span title="640 bronze badges"><span class="badge3"></span><span class="badgecount">640</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2008-10-29 16:38:26Z" class="relativetime">Oct 29 '08 at 16:38</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/28558/pistos"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/5f44dde4b4617356f9a4880cb2f8fcdc?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/28558/pistos">Pistos</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 14,023" dir="ltr">14k</span><span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span><span title="44 silver badges"><span class="badge2"></span><span class="badgecount">44</span></span><span title="66 bronze badges"><span class="badge3"></span><span class="badgecount">66</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-247511" class="comments ">
+        <table>
+                <tbody data-remaining-comments-count="3"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-28006613" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="supernova">107</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Using jQuery for a simple GET-request (as questined) is overkill</span>
+                    &ndash;&nbsp;<a href="/users/1692735/andr%c3%a9-fiedler"
+                       title="596 reputation"
+                       class="comment-user">Andr&#233; Fiedler</a>
+                <span class="comment-date" dir="ltr"><span title="2013-09-23 15:20:19Z" class="relativetime-clean">Sep 23 '13 at 15:20</span></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-28502299" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">4</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@BornToCode you should investigate further and possibly open up a bug on the jQuery issue tracker in that case</span>
+                    &ndash;&nbsp;<a href="/users/210780/ashes999"
+                       title="5,204 reputation"
+                       class="comment-user">ashes999</a>
+                <span class="comment-date" dir="ltr"><span title="2013-10-08 16:58:42Z" class="relativetime-clean">Oct 8 '13 at 16:58</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-31313712" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="hot">17</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Voted down for implementing in jQuery when it could be done in pure JS. Fair enough if jQuery was loaded already, but very bad practice using a huge library just for a get.</span>
+                    &ndash;&nbsp;<a href="/users/686490/sam"
+                       title="2,875 reputation"
+                       class="comment-user">Sam</a>
+                <span class="comment-date" dir="ltr"><span title="2014-01-01 14:47:44Z" class="relativetime-clean">Jan 1 '14 at 14:47</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-37814678" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="supernova">50</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I know some people want to write pure Javascript.  I get that.  I have no problem with people doing that in their projects.  My &quot;In jQuery:&quot; should be intpreted as &quot;I know you asked how to do it in Javascript, but let me show you how you would do that with jQuery, that you might have your curiosity piqued by seeing what kind of syntax conciseness and clarity you can enjoy by using this library, which would afford you numerous other advantages and tools as well&quot;.</span>
+                    &ndash;&nbsp;<a href="/users/28558/pistos"
+                       title="14,023 reputation"
+                       class="comment-user">Pistos</a>
+                <span class="comment-date" dir="ltr"><span title="2014-06-26 19:47:09Z" class="relativetime-clean">Jun 26 '14 at 19:47</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-37814785" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="warm">13</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Observe also that the original poster later said: &quot;Thanks for all the answers! I went with jQuery based on some things I read on their site.&quot;.</span>
+                    &ndash;&nbsp;<a href="/users/28558/pistos"
+                       title="14,023 reputation"
+                       class="comment-user">Pistos</a>
+                <span class="comment-date" dir="ltr"><span title="2014-06-26 19:49:59Z" class="relativetime-clean">Jun 26 '14 at 19:49</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-247511" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link  dno"
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   ></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href=# onclick="">show <b>3</b> more comments</a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="22076667"></a>
+<div id="answer-22076667" class="answer" data-answerid="22076667"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="22076667">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">76</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Lots of great advice above, but not very reusable, and too often filled with DOM nonsense and other fluff that hides the easy code.</p>
+
+<p>Here's a Javascript class we created that's reusable and easy to use.  Currently it only has a GET method, but that works for us.  Adding a POST shouldn't tax anyone's skills.</p>
+
+<pre><code>var HttpClient = function() {
+    this.get = function(aUrl, aCallback) {
+        var anHttpRequest = new XMLHttpRequest();
+        anHttpRequest.onreadystatechange = function() { 
+            if (anHttpRequest.readyState == 4 &amp;&amp; anHttpRequest.status == 200)
+                aCallback(anHttpRequest.responseText);
+        }
+
+        anHttpRequest.open( "GET", aUrl, true );            
+        anHttpRequest.send( null );
+    }
+}
+</code></pre>
+
+<p>Using it is as easy as:</p>
+
+<pre><code>var client = new HttpClient();
+client.get('http://some/thing?with=arguments', function(response) {
+    // do something with response
+});
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/22076667" title="short permalink to this answer" class="short-link" id="link-post-22076667">share</a><span class="lsep">|</span><a href="/posts/22076667/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/22076667/revisions" title="show all edits to this post">edited <span title="2016-12-14 20:17:08Z" class="relativetime">Dec 14 '16 at 20:17</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/98029/ekevoo"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/311ccdb861b942ed3c5c99a4053e4ca5?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/98029/ekevoo">Ekevoo</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,485</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2014-02-27 18:03:11Z" class="relativetime">Feb 27 '14 at 18:03</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/214046/tggagne"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/37ba72f0b83c9cefd05468960df488da?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/214046/tggagne">tggagne</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,309</span><span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-22076667" class="comments ">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-56085920" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="warm">13</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Looks like this problem was addressed in a later edit.</span>
+                    &ndash;&nbsp;<a href="/users/1638010/craig-s-anderson"
+                       title="3,779 reputation"
+                       class="comment-user">Craig S. Anderson</a>
+                <span class="comment-date" dir="ltr"><span title="2015-12-09 01:34:16Z" class="relativetime-clean">Dec 9 '15 at 1:34</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-70343691" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">UnCaughtReference error, HttpClient is not defined . I am getting this one first line it self .</span>
+                    &ndash;&nbsp;<a href="/users/2832503/sashikanta"
+                       title="131 reputation"
+                       class="comment-user">sashikanta</a>
+                <span class="comment-date" dir="ltr"><span title="2017-01-10 13:17:16Z" class="relativetime-clean">Jan 10 at 13:17</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-70629026" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">How do you call it from html onClick?</span>
+                    &ndash;&nbsp;<a href="/users/447040/gobliins"
+                       title="1,148 reputation"
+                       class="comment-user">Gobliins</a>
+                <span class="comment-date" dir="ltr"><span title="2017-01-18 10:39:39Z" class="relativetime-clean">Jan 18 at 10:39</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-71263954" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Make a function else where that contains the var client... and just run functionName(); return false; in the onClick</span>
+                    &ndash;&nbsp;<a href="/users/1168052/mail929"
+                       title="1,109 reputation"
+                       class="comment-user">mail929</a>
+                <span class="comment-date" dir="ltr"><span title="2017-02-04 20:48:07Z" class="relativetime-clean">Feb 4 at 20:48</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-22076667" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="4122716"></a>
+<div id="answer-4122716" class="answer" data-answerid="4122716"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="4122716">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">74</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>A version without callback</p>
+
+<pre><code>var i = document.createElement("img");
+i.src = "/your/GET/url?params=here";
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/4122716" title="short permalink to this answer" class="short-link" id="link-post-4122716">share</a><span class="lsep">|</span><a href="/posts/4122716/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2010-11-08 09:50:21Z" class="relativetime">Nov 8 '10 at 9:50</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/500520/anieto2k"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/1fd3a5be7c5866c89f1fc80ea5d1e61a?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/500520/anieto2k">aNieto2k</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">741</span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-4122716" class="comments ">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-9660689" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="warm">11</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">does this work in all browsers?</span>
+                    &ndash;&nbsp;<a href="/users/640401/dev-musings"
+                       title="473 reputation"
+                       class="comment-user">dev_musings</a>
+                <span class="comment-date" dir="ltr"><span title="2011-10-27 01:06:11Z" class="relativetime-clean">Oct 27 '11 at 1:06</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-20091404" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">4</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">does this work with text also?</span>
+                    &ndash;&nbsp;<a href="/users/1397442/knutole"
+                       title="847 reputation"
+                       class="comment-user">knutole</a>
+                <span class="comment-date" dir="ltr"><span title="2013-01-21 02:24:42Z" class="relativetime-clean">Jan 21 '13 at 2:24</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-67583522" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Excellent! I needed a Greasemonkey script to keep a session alive and this snippet is perfect. Just wrapped it in an <code>setInterval</code> call.</span>
+                    &ndash;&nbsp;<a href="/users/786474/carcamano"
+                       title="541 reputation"
+                       class="comment-user">Carcamano</a>
+                <span class="comment-date" dir="ltr"><span title="2016-10-20 14:33:37Z" class="relativetime-clean">Oct 20 '16 at 14:33</span></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-68508895" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">how do I get the result?</span>
+                    &ndash;&nbsp;<a href="/users/4421975/user4421975"
+                       title="688 reputation"
+                       class="comment-user">user4421975</a>
+                <span class="comment-date" dir="ltr"><span title="2016-11-16 17:19:43Z" class="relativetime-clean">Nov 16 '16 at 17:19</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-4122716" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="247498"></a>
+<div id="answer-247498" class="answer" data-answerid="247498"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="247498">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">65</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Here is code to do it directly with JavaScript. But, as previously mentioned, you'd be much better off with a JavaScript library. My favorite is jQuery.</p>
+
+<p>In the case below, an ASPX page (that's servicing as a poor man's REST service) is being called to return a JavaScript JSON object.</p>
+
+<pre><code>var xmlHttp = null;
+
+function GetCustomerInfo()
+{
+    var CustomerNumber = document.getElementById( "TextBoxCustomerNumber" ).value;
+    var Url = "GetCustomerInfoAsJson.aspx?number=" + CustomerNumber;
+
+    xmlHttp = new XMLHttpRequest(); 
+    xmlHttp.onreadystatechange = ProcessRequest;
+    xmlHttp.open( "GET", Url, true );
+    xmlHttp.send( null );
+}
+
+function ProcessRequest() 
+{
+    if ( xmlHttp.readyState == 4 &amp;&amp; xmlHttp.status == 200 ) 
+    {
+        if ( xmlHttp.responseText == "Not found" ) 
+        {
+            document.getElementById( "TextBoxCustomerName"    ).value = "Not found";
+            document.getElementById( "TextBoxCustomerAddress" ).value = "";
+        }
+        else
+        {
+            var info = eval ( "(" + xmlHttp.responseText + ")" );
+
+            // No parsing necessary with JSON!        
+            document.getElementById( "TextBoxCustomerName"    ).value = info.jsonData[ 0 ].cmname;
+            document.getElementById( "TextBoxCustomerAddress" ).value = info.jsonData[ 0 ].cmaddr1;
+        }                    
+    }
+}
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/247498" title="short permalink to this answer" class="short-link" id="link-post-247498">share</a><span class="lsep">|</span><a href="/posts/247498/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/247498/revisions" title="show all edits to this post">edited <span title="2013-09-16 08:33:12Z" class="relativetime">Sep 16 '13 at 8:33</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <span class="anonymous-gravatar"></span>
+    </div>
+    <div class="user-details">
+        user155407
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2008-10-29 16:35:06Z" class="relativetime">Oct 29 '08 at 16:35</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/2536/rp"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/CzFvS.png?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/2536/rp">rp.</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 12,001" dir="ltr">12k</span><span title="9 gold badges"><span class="badge1"></span><span class="badgecount">9</span></span><span title="52 silver badges"><span class="badge2"></span><span class="badgecount">52</span></span><span title="73 bronze badges"><span class="badge3"></span><span class="badgecount">73</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-247498" class="comments ">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-36484316" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="hot">24</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Since this answer is one of the top results for googling &quot;http request javascript&quot;, it&#39;s worth mentioning that running eval on the response data like that is considered bad practice</span>
+                    &ndash;&nbsp;<a href="/users/1651953/kloar"
+                       title="346 reputation"
+                       class="comment-user">Kloar</a>
+                <span class="comment-date" dir="ltr"><span title="2014-05-19 09:47:10Z" class="relativetime-clean">May 19 '14 at 9:47</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-53065084" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="warm">5</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@Kloar good point, but it would be even better to give the reason why it&#39;s bad, which I guess is security. Explaining why practices are bad is the best way to make people switch their habits.</span>
+                    &ndash;&nbsp;<a href="/users/2472389/balmipour"
+                       title="462 reputation"
+                       class="comment-user">Balmipour</a>
+                <span class="comment-date" dir="ltr"><span title="2015-09-16 11:16:18Z" class="relativetime-clean">Sep 16 '15 at 11:16</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-247498" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="25358151"></a>
+<div id="answer-25358151" class="answer" data-answerid="25358151"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="25358151">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">17</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>A copy-paste ready version</p>
+
+<pre><code>var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+    if (request.readyState === 4) {
+        if (request.status === 200) {
+            document.body.className = 'ok';
+            console.log(request.responseText);
+        } else {
+            document.body.className = 'error';
+        }
+    }
+};
+request.open("GET", url , true);
+request.send(null);
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/25358151" title="short permalink to this answer" class="short-link" id="link-post-25358151">share</a><span class="lsep">|</span><a href="/posts/25358151/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/25358151/revisions" title="show all edits to this post">edited <span title="2015-11-24 23:22:37Z" class="relativetime">Nov 24 '15 at 23:22</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2014-08-18 07:23:27Z" class="relativetime">Aug 18 '14 at 7:23</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/980442/daniel-de-le%c3%b3n"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/O6GeW.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/980442/daniel-de-le%c3%b3n">Daniel De Le&#243;n</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">7,040</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="45 silver badges"><span class="badge2"></span><span class="badgecount">45</span></span><span title="48 bronze badges"><span class="badge3"></span><span class="badgecount">48</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-25358151" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-25358151" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="247516"></a>
+<div id="answer-247516" class="answer" data-answerid="247516"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="247516">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">13</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>IE will cache URLs in order to make loading faster, but if you're, say, polling a server at intervals trying to get new information, IE will cache that URL and will likely return the same data set you've always had.</p>
+
+<p>Regardless of how you end up doing your GET request - vanilla JavaScript, Prototype, jQuery, etc - make sure that you put a mechanism in place to combat caching. In order to combat that, append a unique token to the end of the URL you're going to be hitting. This can be done by:</p>
+
+<pre><code>var sURL = '/your/url.html?' + (new Date()).getTime();
+</code></pre>
+
+<p>This will append a unique timestamp to the end of the URL and will prevent any caching from happening.</p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/247516" title="short permalink to this answer" class="short-link" id="link-post-247516">share</a><span class="lsep">|</span><a href="/posts/247516/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/247516/revisions" title="show all edits to this post">edited <span title="2015-09-12 01:01:08Z" class="relativetime">Sep 12 '15 at 1:01</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/779324/arend"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/051a55039163d903ea43193b2e832c98?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/779324/arend">Arend</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,385</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="17 silver badges"><span class="badge2"></span><span class="badgecount">17</span></span><span title="35 bronze badges"><span class="badge3"></span><span class="badgecount">35</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2008-10-29 16:40:06Z" class="relativetime">Oct 29 '08 at 16:40</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/20/tom"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/1f0b00b8853cf0311888bb3ed2a77ebc?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/20/tom">Tom</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">7,526</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="39 silver badges"><span class="badge2"></span><span class="badgecount">39</span></span><span title="57 bronze badges"><span class="badge3"></span><span class="badgecount">57</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-247516" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-247516" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="38297729"></a>
+<div id="answer-38297729" class="answer" data-answerid="38297729"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="38297729">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">13</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>The new <a href="https://developers.google.com/web/updates/2015/03/introduction-to-fetch?hl=en" rel="noreferrer"><code>window.fetch</code></a> API is a cleaner replacement for <code>XMLHttpRequest</code> that makes use of ES6 promises. There's a nice explanation <a href="https://jakearchibald.com/2015/thats-so-fetch/" rel="noreferrer">here</a>, but it boils down to (from the article):</p>
+
+<pre><code>fetch(url).then(function(response) {
+  return response.json();
+}).then(function(data) {
+  console.log(data);
+}).catch(function() {
+  console.log("Booo");
+});
+</code></pre>
+
+<p><a href="http://caniuse.com/#feat=fetch" rel="noreferrer">Browser support</a> is still a bit limited at this point (works in Chrome, Firefox, Edge (v14) but not <s>Safari</s> or IE), however <a href="https://github.com/github/fetch" rel="noreferrer">github has a polyfill</a> available.</p>
+
+<p><em>Update</em>: Safari v10.1 now supports <code>window.fetch</code>. Android browser and Chrome for Android have also added support, however iOS Safari has not.</p>
+
+<p>I guess whether this is more convenient than jQuery or XMLHttpRequest or not depends on the nature of the project.</p>
+
+<p>Here's a link to the spec <a href="https://fetch.spec.whatwg.org/" rel="noreferrer">https://fetch.spec.whatwg.org/</a></p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/38297729" title="short permalink to this answer" class="short-link" id="link-post-38297729">share</a><span class="lsep">|</span><a href="/posts/38297729/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/38297729/revisions" title="show all edits to this post">edited <span title="2017-02-09 02:43:30Z" class="relativetime">Feb 9 at 2:43</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-07-11 00:45:57Z" class="relativetime">Jul 11 '16 at 0:45</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/66349/peter-gibson"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/9c13b93d65bbb06c10fc349fa36b67dc?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/66349/peter-gibson">Peter Gibson</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 10,044" dir="ltr">10k</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="31 silver badges"><span class="badge2"></span><span class="badgecount">31</span></span><span title="37 bronze badges"><span class="badge3"></span><span class="badgecount">37</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-38297729" class="comments ">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-72509382" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I might save someone some time by mentioning that you can do this to include credentials in the request: <code>fetch(url, { credentials:&quot;include&quot; })</code></span>
+                    &ndash;&nbsp;<a href="/users/287761/enselic"
+                       title="76 reputation"
+                       class="comment-user">Enselic</a>
+                <span class="comment-date" dir="ltr"><span title="2017-03-09 11:01:29Z" class="relativetime-clean">Mar 9 at 11:01</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-38297729" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="247499"></a>
+<div id="answer-247499" class="answer" data-answerid="247499"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="247499">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">10</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p><a href="http://www.prototypejs.org" rel="noreferrer">Prototype</a> makes it dead simple</p>
+
+<pre><code>new Ajax.Request( '/myurl', {
+  method:  'get',
+  parameters:  { 'param1': 'value1'},
+  onSuccess:  function(response){
+    alert(response.responseText);
+  },
+  onFailure:  function(){
+    alert('ERROR');
+  }
+});
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/247499" title="short permalink to this answer" class="short-link" id="link-post-247499">share</a><span class="lsep">|</span><a href="/posts/247499/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-10-29 16:35:26Z" class="relativetime">Oct 29 '08 at 16:35</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/305/mark-biek"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/040ffc7f3327b05f01c54a8bef3ba60a?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/305/mark-biek">Mark Biek</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 72,335" dir="ltr">72.3k</span><span title="46 gold badges"><span class="badge1"></span><span class="badgecount">46</span></span><span title="131 silver badges"><span class="badge2"></span><span class="badgecount">131</span></span><span title="186 bronze badges"><span class="badge3"></span><span class="badgecount">186</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-247499" class="comments ">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-3570740" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">The problem is that Mac OS X doesn&#39;t come with Prototype pre-installed. As the widget needs to run in any computer, including Prototype (or jQuery) in each widget is not the best solution.</span>
+                    &ndash;&nbsp;<a href="/users/225647/kiamlaluno"
+                       title="16,012 reputation"
+                       class="comment-user">kiamlaluno</a>
+                <span class="comment-date" dir="ltr"><span title="2010-08-07 05:05:52Z" class="relativetime-clean">Aug 7 '10 at 5:05</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-71607366" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@kiamlaluno use Prototype cdn from cloudflare</span>
+                    &ndash;&nbsp;<a href="/users/867437/vladimir-stazhilov"
+                       title="1,033 reputation"
+                       class="comment-user">Vladimir Stazhilov</a>
+                <span class="comment-date" dir="ltr"><span title="2017-02-14 10:34:19Z" class="relativetime-clean">Feb 14 at 10:34</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-247499" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="249239"></a>
+<div id="answer-249239" class="answer" data-answerid="249239"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="249239">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">5</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I'm not familiar with Mac OS Dashcode Widgets, but if they let you use JavaScript libraries and support <a href="http://en.wikipedia.org/wiki/XMLHttpRequest" rel="nofollow noreferrer">XMLHttpRequests</a>, I'd use <a href="http://docs.jquery.com/Ajax/jQuery.get#examples" rel="nofollow noreferrer">jQuery</a> and do something like this:</p>
+
+<pre><code>var page_content;
+$.get( "somepage.php", function(data){
+    page_content = data;
+});
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/249239" title="short permalink to this answer" class="short-link" id="link-post-249239">share</a><span class="lsep">|</span><a href="/posts/249239/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/249239/revisions" title="show all edits to this post">edited <span title="2014-01-27 14:27:03Z" class="relativetime">Jan 27 '14 at 14:27</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/63550/peter-mortensen"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/RIZKi.png?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/63550/peter-mortensen">Peter Mortensen</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 10,931" dir="ltr">10.9k</span><span title="15 gold badges"><span class="badge1"></span><span class="badgecount">15</span></span><span title="76 silver badges"><span class="badge2"></span><span class="badgecount">76</span></span><span title="109 bronze badges"><span class="badge3"></span><span class="badgecount">109</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-10-30 04:03:53Z" class="relativetime">Oct 30 '08 at 4:03</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/13216/daniel-beardsley"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/e1e791bc2bb49b686b1c65d14de8160d?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/13216/daniel-beardsley">Daniel Beardsley</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">9,673</span><span title="15 gold badges"><span class="badge1"></span><span class="badgecount">15</span></span><span title="51 silver badges"><span class="badge2"></span><span class="badgecount">51</span></span><span title="74 bronze badges"><span class="badge3"></span><span class="badgecount">74</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-249239" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-249239" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="248140"></a>
+<div id="answer-248140" class="answer" data-answerid="248140"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="248140">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">4</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>In your widget's Info.plist file, don't forget to set your <code>AllowNetworkAccess</code> key to true.</p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/248140" title="short permalink to this answer" class="short-link" id="link-post-248140">share</a><span class="lsep">|</span><a href="/posts/248140/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-10-29 19:42:10Z" class="relativetime">Oct 29 '08 at 19:42</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/11577/andrew-hedges"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/ZPFtN.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/11577/andrew-hedges">Andrew Hedges</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 15,299" dir="ltr">15.3k</span><span title="13 gold badges"><span class="badge1"></span><span class="badgecount">13</span></span><span title="53 silver badges"><span class="badge2"></span><span class="badgecount">53</span></span><span title="74 bronze badges"><span class="badge3"></span><span class="badgecount">74</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-248140" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-248140" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="30087038"></a>
+<div id="answer-30087038" class="answer" data-answerid="30087038"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="30087038">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">3</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>For those who use <a href="https://docs.angularjs.org/api/ng/service/$http" rel="nofollow">AngularJs</a>, it's <code>$http.get</code>:</p>
+
+<pre><code>$http.get('/someUrl').
+  success(function(data, status, headers, config) {
+    // this callback will be called asynchronously
+    // when the response is available
+  }).
+  error(function(data, status, headers, config) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/30087038" title="short permalink to this answer" class="short-link" id="link-post-30087038">share</a><span class="lsep">|</span><a href="/posts/30087038/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2015-05-06 20:36:35Z" class="relativetime">May 6 '15 at 20:36</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/288671/vitalii-fedorenko"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/Fwgef.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/288671/vitalii-fedorenko">Vitalii Fedorenko</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 48,376" dir="ltr">48.4k</span><span title="13 gold badges"><span class="badge1"></span><span class="badgecount">13</span></span><span title="111 silver badges"><span class="badge2"></span><span class="badgecount">111</span></span><span title="95 bronze badges"><span class="badge3"></span><span class="badgecount">95</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-30087038" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-30087038" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="247489"></a>
+<div id="answer-247489" class="answer" data-answerid="247489"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="247489">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p><a href="http://en.wikipedia.org/wiki/Ajax_%28programming%29" rel="nofollow noreferrer">Ajax</a></p>
+
+<p>You'd be best off using a library such as <a href="http://en.wikipedia.org/wiki/Prototype_JavaScript_Framework" rel="nofollow noreferrer">Prototype</a> or <a href="http://en.wikipedia.org/wiki/JQuery" rel="nofollow noreferrer">jQuery</a>.</p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/247489" title="short permalink to this answer" class="short-link" id="link-post-247489">share</a><span class="lsep">|</span><a href="/posts/247489/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/247489/revisions" title="show all edits to this post">edited <span title="2014-01-27 13:52:30Z" class="relativetime">Jan 27 '14 at 13:52</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/63550/peter-mortensen"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/RIZKi.png?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/63550/peter-mortensen">Peter Mortensen</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 10,931" dir="ltr">10.9k</span><span title="15 gold badges"><span class="badge1"></span><span class="badgecount">15</span></span><span title="76 silver badges"><span class="badge2"></span><span class="badgecount">76</span></span><span title="109 bronze badges"><span class="badge3"></span><span class="badgecount">109</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-10-29 16:33:21Z" class="relativetime">Oct 29 '08 at 16:33</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/24181/greg"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/8438e7bf53378150813b3dfec7f22232?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/24181/greg">Greg</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 212,323" dir="ltr">212k</span><span title="38 gold badges"><span class="badge1"></span><span class="badgecount">38</span></span><span title="314 silver badges"><span class="badge2"></span><span class="badgecount">314</span></span><span title="309 bronze badges"><span class="badge3"></span><span class="badgecount">309</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-247489" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-247489" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="248726"></a>
+<div id="answer-248726" class="answer" data-answerid="248726"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="248726">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>The best way is to use AJAX ( you can find a simple tutorial on this page <a href="http://www.tizag.com/&quot;Tizag&quot;" rel="nofollow noreferrer">Tizag</a>). The reason is that any other technique you may use requires more code, it is not guaranteed to work cross browser without rework and requires you use more client memory by opening hidden pages inside frames passing urls parsing their data and closing them. 
+AJAX is the way to go in this situation. That my two years of javascript heavy development speaking. </p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/248726" title="short permalink to this answer" class="short-link" id="link-post-248726">share</a><span class="lsep">|</span><a href="/posts/248726/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-10-29 23:01:11Z" class="relativetime">Oct 29 '08 at 23:01</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/32582/nikola-stjelja"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/3e2c26dac46ccb7d5e4fd3f86e7abf5a?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/32582/nikola-stjelja">Nikola Stjelja</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,767</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="31 silver badges"><span class="badge2"></span><span class="badgecount">31</span></span><span title="42 bronze badges"><span class="badge3"></span><span class="badgecount">42</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-248726" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-248726" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="3429189"></a>
+<div id="answer-3429189" class="answer" data-answerid="3429189"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="3429189">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>If you want to use the code for a Dashboard widget, and you don't want to include a JavaScript library in every widget you created, then you can use the object XMLHttpRequest that Safari natively supports.</p>
+
+<p>As reported by Andrew Hedges, a widget doesn't have access to a network, by default; you need to change that setting in the info.plist associated with the widget.</p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/3429189" title="short permalink to this answer" class="short-link" id="link-post-3429189">share</a><span class="lsep">|</span><a href="/posts/3429189/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2010-08-07 05:03:15Z" class="relativetime">Aug 7 '10 at 5:03</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/225647/kiamlaluno"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/5315ed8662329312d746e5de447c87c6?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/225647/kiamlaluno">kiamlaluno</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 16,012" dir="ltr">16k</span><span title="12 gold badges"><span class="badge1"></span><span class="badgecount">12</span></span><span title="51 silver badges"><span class="badge2"></span><span class="badgecount">51</span></span><span title="79 bronze badges"><span class="badge3"></span><span class="badgecount">79</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-3429189" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-3429189" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="36313266"></a>
+<div id="answer-36313266" class="answer" data-answerid="36313266"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="36313266">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>It might also prove very useful to try REQUESTIFY- a library that Simplifies node HTTP request making. </p>
+
+<p><a href="https://github.com/ranm8/requestify" rel="nofollow">https://github.com/ranm8/requestify</a></p>
+
+<pre><code>var requestify = require('requestify'); 
+</code></pre>
+
+<p>Getting a request:</p>
+
+<pre><code>requestify.get('http://example.com').then(function(response) {
+    // Get the response body
+    response.getBody();
+});
+</code></pre>
+
+<p>And to json:</p>
+
+<pre><code>requestify.post('http://example.com', {
+        hello: 'world'
+    })
+    .then(function(response) {
+        // Get the response body (JSON parsed or jQuery object for XMLs)
+       response.getBody();
+
+        // Get the raw response body
+        response.body;
+    });
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/36313266" title="short permalink to this answer" class="short-link" id="link-post-36313266">share</a><span class="lsep">|</span><a href="/posts/36313266/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/36313266/revisions" title="show all edits to this post">edited <span title="2016-03-30 15:39:28Z" class="relativetime">Mar 30 '16 at 15:39</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-03-30 15:27:14Z" class="relativetime">Mar 30 '16 at 15:27</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/5674449/yoni"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/a2a51798229eb2a47c5b2b2748680747?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/5674449/yoni">Yoni</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">560</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-36313266" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-36313266" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="26060638"></a>
+<div id="answer-26060638" class="answer" data-answerid="26060638"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="26060638">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You can get an HTTP GET request in two ways:</p>
+
+<ol>
+<li><p>This approach based on xml format. You have to pass the URL for the request.  </p>
+
+<pre><code>xmlhttp.open("GET","URL",true);
+xmlhttp.send();
+</code></pre></li>
+<li><p>This one is based on jQuery. You have to specify the URL and function_name you want to call.</p>
+
+<pre><code>$("btn").click(function() {
+  $.ajax({url: "demo_test.txt", success: function_name(result) {
+    $("#innerdiv").html(result);
+  }});
+}); 
+</code></pre></li>
+</ol>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/26060638" title="short permalink to this answer" class="short-link" id="link-post-26060638">share</a><span class="lsep">|</span><a href="/posts/26060638/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/26060638/revisions" title="show all edits to this post">edited <span title="2016-04-03 17:11:34Z" class="relativetime">Apr 3 '16 at 17:11</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/225647/kiamlaluno"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/5315ed8662329312d746e5de447c87c6?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/225647/kiamlaluno">kiamlaluno</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 16,012" dir="ltr">16k</span><span title="12 gold badges"><span class="badge1"></span><span class="badgecount">12</span></span><span title="51 silver badges"><span class="badge2"></span><span class="badgecount">51</span></span><span title="79 bronze badges"><span class="badge3"></span><span class="badgecount">79</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-09-26 13:21:08Z" class="relativetime">Sep 26 '14 at 13:21</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/3045721/parag-rane"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/7Z2ri.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/3045721/parag-rane">parag.rane</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">95</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-26060638" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-26060638" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="38168619"></a>
+<div id="answer-38168619" class="answer" data-answerid="38168619"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="38168619">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<pre><code>function get(path) {
+    var form = document.createElement("form");
+    form.setAttribute("method", "get");
+    form.setAttribute("action", path);
+    document.body.appendChild(form);
+    form.submit();
+}
+
+
+get('/my/url/')
+</code></pre>
+
+<p>Same thing can be done for post request as well.<br>
+Have a look at this link <a href="http://stackoverflow.com/questions/133925/javascript-post-request-like-a-form-submit">JavaScript post request like a form submit</a></p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/38168619" title="short permalink to this answer" class="short-link" id="link-post-38168619">share</a><span class="lsep">|</span><a href="/posts/38168619/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-07-03 09:34:38Z" class="relativetime">Jul 3 '16 at 9:34</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/4452469/gaurav-gupta"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/aeac63b07795278e72df7eda94d6f7d2?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/4452469/gaurav-gupta">gaurav gupta</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">589</span><span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span><span title="27 bronze badges"><span class="badge3"></span><span class="badgecount">27</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-38168619" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-38168619" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="39981705"></a>
+<div id="answer-39981705" class="answer" data-answerid="39981705"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="39981705">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You can do it with pure JS too:</p>
+
+<pre><code>// Create the XHR object.
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+if ("withCredentials" in xhr) {
+// XHR for Chrome/Firefox/Opera/Safari.
+xhr.open(method, url, true);
+} else if (typeof XDomainRequest != "undefined") {
+// XDomainRequest for IE.
+xhr = new XDomainRequest();
+xhr.open(method, url);
+} else {
+// CORS not supported.
+xhr = null;
+}
+return xhr;
+}
+
+// Make the actual CORS request.
+function makeCorsRequest() {
+ // This is a sample server that supports CORS.
+ var url = 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
+
+var xhr = createCORSRequest('GET', url);
+if (!xhr) {
+alert('CORS not supported');
+return;
+}
+
+// Response handlers.
+xhr.onload = function() {
+var text = xhr.responseText;
+alert('Response from CORS request to ' + url + ': ' + text);
+};
+
+xhr.onerror = function() {
+alert('Woops, there was an error making the request.');
+};
+
+xhr.send();
+}
+</code></pre>
+
+<p>See: for more details: <a href="https://www.html5rocks.com/en/tutorials/cors/" rel="nofollow">https://www.html5rocks.com/en/tutorials/cors/</a></p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/39981705" title="short permalink to this answer" class="short-link" id="link-post-39981705">share</a><span class="lsep">|</span><a href="/posts/39981705/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-10-11 16:02:56Z" class="relativetime">Oct 11 '16 at 16:02</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/2290540/jpereira"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/114px.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/2290540/jpereira">jpereira</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">50</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-39981705" class="comments  dno">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-39981705" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="38479928"></a>
+<div id="answer-38479928" class="answer" data-answerid="38479928"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="38479928">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>One solution supporting older browsers:</p>
+
+<pre><code>function httpRequest()
+{
+    var ajax = null,
+        response = null,
+        self = this;
+
+    this.method = null;
+    this.url = null;
+    this.async = true;
+    this.data = null;
+
+    this.send = function()
+    {
+        ajax.open(this.method, this.url, this.asnyc);
+        ajax.send(this.data);
+    };
+
+    if(window.XMLHttpRequest)
+    {
+        ajax = new XMLHttpRequest();
+    }
+    else if(window.ActiveXObject)
+    {
+        try
+        {
+            ajax = new ActiveXObject("Msxml2.XMLHTTP.6.0");
+        }
+        catch(e)
+        {
+            try
+            {
+                ajax = new ActiveXObject("Msxml2.XMLHTTP.3.0");
+            }
+            catch(ee)
+            {
+                self.fail("not supported");
+            }
+        }
+    }
+
+    if(ajax == null)
+    {
+        return false;
+    }
+
+    ajax.onreadystatechange = function()
+    {
+        if(this.readyState == 4)
+        {
+            if(this.status == 200)
+            {
+                self.success(this.responseText);
+            }
+            else
+            {
+                self.fail(this.status + " - " + this.statusText);
+            }
+        }
+    };
+}
+</code></pre>
+
+<p>Maybe somewhat overkill but you definitely go safe with this code.</p>
+
+<p><strong>Usage:</strong>
+<br></p>
+
+<pre><code>//create request with its porperties
+var request = new httpRequest();
+request.method = "GET";
+request.url = "https://example.com/api?parameter=value";
+
+//create callback for success containing the response
+request.success = function(response)
+{
+    console.log(response);
+};
+
+//and a fail callback containing the error
+request.fail = function(error)
+{
+    console.log(error);
+};
+
+//and finally send it away
+request.send();
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/38479928" title="short permalink to this answer" class="short-link" id="link-post-38479928">share</a><span class="lsep">|</span><a href="/posts/38479928/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/38479928/revisions" title="show all edits to this post">edited <span title="2016-10-15 14:05:24Z" class="relativetime">Oct 15 '16 at 14:05</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-07-20 11:23:44Z" class="relativetime">Jul 20 '16 at 11:23</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/5862399/flyingpotat0"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/724b9d9acad9278779b78da11ebf1fb6?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/5862399/flyingpotat0">flyingPotat0</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">62</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+      <div id="comments-38479928" class="comments ">
+        <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-67394072" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Could people please give some comments about what I have done wrong? Not very helpful in that way!</span>
+                    &ndash;&nbsp;<a href="/users/5862399/flyingpotat0"
+                       title="62 reputation"
+                       class="comment-user">flyingPotat0</a>
+                <span class="comment-date" dir="ltr"><span title="2016-10-15 14:04:42Z" class="relativetime-clean">Oct 15 '16 at 14:04</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+        </table>
+      </div>
+
+        <div id="comments-link-38479928" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+            <div class="question-status">
+        <h2>                    <b>protected</b> by <a href="/users/31671/alex">alex</a> <span dir="ltr"><span title="2011-04-11 23:58:50Z" class="relativetime">Apr 11 '11 at 23:58</span></span>
+</h2>
+        <p>
+Thank you for your interest in this question. 
+Because it has attracted low-quality or spam answers that had to be removed, posting an answer now requires 10 <a href="/help/whats-reputation">reputation</a> on this site (the <a href="/help/privileges/new-user">association bonus does not count</a>).
+<br /><br />
+Would you like to answer one of these <a href="/unanswered?fromProtectedNotice=true">unanswered questions</a> instead?
+</p>
+    </div>
+
+
+
+
+
+            <h2 class="bottom-notice" data-loc="1">
+Not the answer you&#39;re looking for?              Browse other questions tagged <a href="/questions/tagged/javascript" class="post-tag" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="/questions/tagged/http" class="post-tag" title="show questions tagged &#39;http&#39;" rel="tag">http</a> <a href="/questions/tagged/get" class="post-tag" title="show questions tagged &#39;get&#39;" rel="tag">get</a> <a href="/questions/tagged/dashcode" class="post-tag" title="show questions tagged &#39;dashcode&#39;" rel="tag">dashcode</a>  or <a href="/questions/ask">ask your own question</a>.            </h2>
+      </div>
+    </div>
+        <div id="sidebar" class="show-votes" role="complementary" aria-label="sidebar">
+                <div class="module question-stats">
+              <table id="qinfo">
+                  <tr>
+                      <td>
+                          <p class="label-key">asked</p>
+                      </td>
+                      <td style="padding-left: 10px">
+                          <p class="label-key" title="2008-10-29 16:31:34Z"><b>8 years ago</b></p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <p class="label-key">viewed</p>
+                      </td>
+
+                      <td style="padding-left: 10px">
+                          <p class="label-key">
+                              <b>895776 times</b>
+                          </p>
+                      </td>
+                  </tr>
+                      <tr>
+                          <td>
+                              <p class="label-key">active</p>
+                          </td>
+                          <td style="padding-left: 10px">
+                              <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2017-02-09 02:43:30Z">1 month ago</a></b></p>
+                          </td>
+                      </tr>
+              </table>
+          </div>
+      <div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Blog
+                </div>
+                <hr />
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="https://stackoverflow.blog/2017/03/30/stack-overflow-unveils-next-steps-computer-security/" class="question-hyperlink">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="https://stackoverflow.blog/2017/03/30/stack-overflow-unveils-next-steps-computer-security/" class="question-hyperlink">Stack Overflow Unveils the Next Steps in Computer Security</a>
+                </div>
+                <br class="cbt" />
+            </div>
+    </div>
+</div>      
+      <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1720528704",[5,17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1720528704"></div>
+            <div id="hireme"></div>
+        <script>
+window.clc_request = 'AkYKy0JmedQIAAAAALvGAwACAAAAAgAAAAAeAAAAfGphdmFzY3JpcHR8aHR0cHxnZXR8ZGFzaGNvZGV8AJRJuB5NhrWOgEs';
+;(function(n){var t,u,r,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(n.allowed[0]!=="*"&&n.allowed.indexOf(location.hostname)===-1)return;if(t=window,t.clc=t.clc||{},u=t.clc_request||t.clcfl_request,t.clc.init=t.clc.init||[],t.clc.init.push(function(n){return n.load()}),t.clc.options){for(r in t.clc.options)n[r]=t.clc.options[r];t.clc.options=n}else t.clc.options=n;i=document.createElement("script");i.async=!0;i.src=n.lib;document.body.appendChild(i)}catch(f){console.error("[clc] Error in loader:",f)}}).call(null, {"azw":true,"kt":2000,"tto":true,"autoload":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","blog.codinghorror.com","talent.stackoverflow.com"],"h":"clc.stackoverflow.com","u":"https://clc.stackoverflow.com/markup.js","lib":"https://cdn.sstatic.net/clc/clc.min.js?v=c05c304a48c2"});        </script>
+      
+
+            <div class="module sidebar-linked">
+  <h4 id="h-linked">Linked</h4>
+  <div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+  <a href="/q/41624505" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes  default">1</div>
+  </a>
+  <a href="/questions/41624505/parse-json-from-url-with-javascript?noredirect=1" class="question-hyperlink">Parse JSON from URL with Javascript</a>
+</div>
+<div class="spacer">
+  <a href="/q/34242889" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes  default">2</div>
+  </a>
+  <a href="/questions/34242889/how-to-http-request-a-url-in-javascript?noredirect=1" class="question-hyperlink">How to HTTP Request a URL in JavaScript?</a>
+</div>
+<div class="spacer">
+  <a href="/q/13439958" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes  default">-2</div>
+  </a>
+  <a href="/questions/13439958/how-to-load-the-html-content-of-a-url-to-a-variable-in-javacript?noredirect=1" class="question-hyperlink">How to load the html content of a URL to a variable in javacript?</a>
+</div>
+<div class="spacer">
+  <a href="/q/33934250" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes  default">1</div>
+  </a>
+  <a href="/questions/33934250/parse-json-data-in-javascript-online?noredirect=1" class="question-hyperlink">Parse json data in javascript online</a>
+</div>
+<div class="spacer">
+  <a href="/q/37240533" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes  default">-1</div>
+  </a>
+  <a href="/questions/37240533/get-json-from-an-url?noredirect=1" class="question-hyperlink">Get JSON from an url</a>
+</div>
+<div class="spacer">
+  <a href="/q/32117867" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes  default">-2</div>
+  </a>
+  <a href="/questions/32117867/is-it-possible-to-call-servlet-and-get-values-from-it-within-javascript?noredirect=1" class="question-hyperlink">Is it possible to call servlet and get values from it within JAVASCRIPT</a>
+</div>
+<div class="spacer">
+  <a href="/q/39916131" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">-1</div>
+  </a>
+  <a href="/questions/39916131/how-to-make-an-http-request-from-html?noredirect=1" class="question-hyperlink">How to make an HTTP request from HTML?</a>
+</div>
+<div class="spacer">
+  <a href="/q/24681256" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">-1</div>
+  </a>
+  <a href="/questions/24681256/how-to-use-a-json-encoded-data-to-javascript-array?noredirect=1" class="question-hyperlink">How to use a JSON ENCODED data to Javascript array?</a>
+</div>
+<div class="spacer">
+  <a href="/q/36863477" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes  default">0</div>
+  </a>
+  <a href="/questions/36863477/save-json-outputed-from-a-url-to-a-file-javascript?noredirect=1" class="question-hyperlink">Save JSON outputed from a URL to a file javascript</a>
+</div>
+<div class="spacer">
+  <a href="/q/41218823" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes  default">0</div>
+  </a>
+  <a href="/questions/41218823/how-do-i-make-http-request-in-javascript?noredirect=1" class="question-hyperlink">How do I make HTTP request in javascript?</a>
+</div>          <div class="spacer more">
+        <a href="/questions/linked/247483">see more linked questions…</a>
+      </div>
+  </div>
+</div>
+
+        <div class="module sidebar-related">
+          <h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer"><a href="/q/111102" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">7341</div></a><a href="/questions/111102/how-do-javascript-closures-work" class="question-hyperlink">How do JavaScript closures work?</a></div><div class="spacer"><a href="/q/133925" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1033</div></a><a href="/questions/133925/javascript-post-request-like-a-form-submit" class="question-hyperlink">JavaScript post request like a form submit</a></div><div class="spacer"><a href="/q/237104" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">2525</div></a><a href="/questions/237104/how-do-i-check-if-an-array-includes-an-object-in-javascript" class="question-hyperlink">How do I check if an array includes an object in JavaScript?</a></div><div class="spacer"><a href="/q/1531093" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1266</div></a><a href="/questions/1531093/how-do-i-get-the-current-date-in-javascript" class="question-hyperlink">How do I get the current date in JavaScript?</a></div><div class="spacer"><a href="/q/2659952" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">340</div></a><a href="/questions/2659952/maximum-length-of-http-get-request" class="question-hyperlink">maximum length of HTTP GET request?</a></div><div class="spacer"><a href="/q/2793150" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1523</div></a><a href="/questions/2793150/using-java-net-urlconnection-to-fire-and-handle-http-requests" class="question-hyperlink">Using java.net.URLConnection to fire and handle HTTP requests</a></div><div class="spacer"><a href="/q/3799220" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">7</div></a><a href="/questions/3799220/how-to-view-the-last-get-http-request-in-javascript" class="question-hyperlink">How to view the last GET HTTP request in JavaScript</a></div><div class="spacer"><a href="/q/19812112" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="/questions/19812112/http-get-request-in-javascript-with-cookie" class="question-hyperlink">HTTP GET request in Javascript with Cookie?</a></div><div class="spacer"><a href="/q/22095882" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="/questions/22095882/empty-responsetext-after-get-http-request-with-javascript" class="question-hyperlink">Empty responseText after GET Http Request with Javascript</a></div><div class="spacer"><a href="/q/24467707" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="/questions/24467707/http-get-request-in-javascript" class="question-hyperlink">Http GET request in javascript</a></div>
+                    </div>
+        </div>
+            
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="https://stackexchange.com/questions?tab=hot"
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/124225/what-does-the-well-of-the-senate-mean-in-this-sentence-and-why-does-it-go-on-t" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does &quot;the well of the Senate&quot; mean in this sentence and why does it go on to talk about &quot;babies&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/361645/what-is-the-default-bibliography-package-and-backend-in-latex" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the default bibliography package and backend in LaTeX?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/361617/strange-signs-after" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Strange signs after &quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/75829/how-could-cats-evolve-toxic-claws" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How could cats evolve toxic claws?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-history" title="History Stack Exchange"></div><a href="http://history.stackexchange.com/questions/36248/why-did-north-america-economically-prosper-and-maintain-stable-government-and-s" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:324 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why did North America economically prosper, and maintain stable government and South/Central America didn&#39;t?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2213716/why-cant-i-row-reduce-and-get-the-same-eigen-values" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why cant I row reduce and get the same Eigen values?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-linguistics" title="Linguistics Stack Exchange"></div><a href="http://linguistics.stackexchange.com/questions/21516/origin-of-the-word-root-del" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:312 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Origin of the word/root &#39;del&#39;
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/156286/what-is-the-color-of-gollums-skin" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the color of Gollum&#39;s skin?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/266124/what-is-this-concept-related-to-group-actions" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:504 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is this concept related to group actions?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-chemistry" title="Chemistry Stack Exchange"></div><a href="http://chemistry.stackexchange.com/questions/71707/why-do-different-h-in-polyprotic-acids-have-different-k" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:431 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why do different H+ in polyprotic acids have different K?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/361643/tikzmark-between-and-matrix-gives-wrong-spacing" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    tikzmark between = and matrix gives wrong spacing
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/90902/how-to-increase-the-chance-of-obtaining-a-refund-in-the-case-of-a-missing-visa" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to increase the chance of obtaining a refund in the case of a missing visa?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/355023/command-not-found-how-do-i-know-what-to-install" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    command not found: how do I know what to install?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/322598/what-is-special-about-maxwells-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is special about Maxwell&#39;s equations?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/381267/negative-of-when" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Negative of When
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/106369/when-do-users-understand-that-a-wizard-navigation-bar-is-clickable" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:102 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    When do users understand that a wizard navigation bar is clickable?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-chess" title="Chess Stack Exchange"></div><a href="http://chess.stackexchange.com/questions/17143/what-are-the-laws-concerning-copyright-of-chess-games" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:435 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What are the laws concerning copyright of chess games?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/88091/having-lunch-at-home" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Having lunch at home
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/114662/palindromic-residue" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Palindromic Residue
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/90893/avoiding-the-sydney-nova-scotia-error" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Avoiding the Sydney, Nova Scotia error
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/97444/is-level-five-permanent-flight-overpowered" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is level five permanent flight overpowered?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/380854/word-for-outcastness" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Word for &quot;outcastness&quot;
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-politics" title="Politics Stack Exchange"></div><a href="http://politics.stackexchange.com/questions/16606/why-couldnt-republicans-who-voted-to-repeal-obamacare-so-many-times-under-obama" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:475 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why couldn&#39;t Republicans who voted to repeal Obamacare so many times under Obama do it under a Republican president?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/361630/how-to-put-equations-and-equivalence-in-latex" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to put equations and equivalence in Latex
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+            more hot questions
+        </a>
+</div>
+    </div>
+  
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="/feeds/question/247483" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>  <script>
+StackExchange.ready(function(){$.get('/posts/247483/ivc/6589');});
+</script>
+<noscript>
+    <div><img src="/posts/247483/ivc/6589" class="dno" alt="" width="0" height="0"></div>
+</noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories" role="contentinfo">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="/tour">tour</a>
+                    <a href="/help">help</a>
+                    <a href="https://stackoverflow.blog?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com">chat</a>
+                    <a href="https://data.stackexchange.com">data</a>
+                    <a href="https://stackexchange.com/legal">legal</a>
+                    <a href="https://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="https://www.stackoverflowbusiness.com/advertise">advertising info</a>
+                        <a href="http://stackoverflow.com/jobs/directory/developer-jobs">developer jobs directory</a>
+
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
+                    <b><a href="/contact">contact us</a></b>
+                        <b><a href="https://meta.stackoverflow.com">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tr>
+            <th colspan=3>
+                Technology
+            </th>
+            <th >
+                Life / Arts
+            </th>
+            <th >
+                Culture / Recreation
+            </th>
+            <th >
+                Science
+            </th>
+            <th >
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                        <li><a href="//softwareengineering.stackexchange.com" title="professionals, academics, and students working within the systems development life cycle who care about creating, delivering, and maintaining software responsibly">Software Engineering</a></li>
+                        <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li>
+                        <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="//mathematica.stackexchange.com" title="users of Wolfram Mathematica">Mathematica</a></li>
+                        <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine&#174; CMS">ExpressionEngine&#174; Answers</a></li>
+                        <li><a href="//crypto.stackexchange.com" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//codereview.stackexchange.com" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="//magento.stackexchange.com" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="//dsp.stackexchange.com" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="//raspberrypi.stackexchange.com" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="//codegolf.stackexchange.com" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="//music.stackexchange.com" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="//ell.stackexchange.com" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="//japanese.stackexchange.com" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="//anime.stackexchange.com" title="anime and manga fans">Anime &amp; Manga</a></li>
+                        <li><a href="//mechanics.stackexchange.com" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (17)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="//cs.stackexchange.com" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                        <li><a href="//philosophy.stackexchange.com" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo &#169; 2017 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2017.3.31.25580
+            </div>
+                </div>
+    </div>
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled<img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('javascript,http,get,dashcode');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-5620270-1');
+                ga('create', 'UA-5620270-59', {name: 'pageData', sampleRate: 5 });
+                ga('set', 'dimension2', '|javascript|http|get|dashcode|');
+                ga('pageData.set', 'dimension2', '|javascript|http|get|dashcode|');
+                ga('send', 'pageview');
+                ga('pageData.send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    </body>
+</html>

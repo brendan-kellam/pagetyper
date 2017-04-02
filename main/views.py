@@ -7,3 +7,6 @@ def index(request):
 	return render(request, 'main/index.html', {})
 
 
+def duplicator(request):
+	return render(request, 'main/duplicator.html', {})
+
