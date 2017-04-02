@@ -1,0 +1,122 @@
+≈50
+
+
+	<h1>this is a test!</h1>ƒ
+	<p>This html is being dynamically interpreted in real time</p>ƒ
+
+/*
+If your a programmer, I hope you agree 
+with me when I say: code is awesome!
+˚500
+
+It constantly offers interesting new challenges
+and ways to be creative.
+˚500
+
+On the other hand, resumes...well...are kind of dull.  
+˚200
+≈2
+¯\_(ツ)_/¯
+≈40
+˚500
+
+They are, however, important so I will get to mine very soon.
+˚500
+
+Before I bore you with my resume, I would like to show-off a bit
+and give a look at how this website was written 
+˚500
+
+engaging warp speed in..
+˚200
+
+3....
+˚500
+
+...2...
+˚500
+
+...1.
+˚500
+
+≈1
+*/
+
+<html>
+<!--
+	Hi there.
+	My name is Brendan Kellam, a software engineering student at
+	McGill University in Montreal, Canada
+-->
+
+<!-- -->
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>B.K</title>
+
+
+		<!-- load all django static files -->
+		{% load staticfiles %}
+
+		<!-- load Bootstrap CSS -->
+		<link href="{% static "css/bootstrap-theme.min.css" %}" rel="stylesheet">
+		<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+
+		<!-- load animate.css -->
+		<link href="{% static "css/animate.min.css" %}" rel="stylesheet">
+
+		<!-- load index.css -->
+		<link href="{% static "css/index.css" %}" rel="stylesheet">
+
+	</head>
+
+
+	<body>
+		
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-6">
+					<div id="main" class="auto-type"></div>
+				</div>
+				<div class="col-md-6">
+					<div id="test"></div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+		<footer class="footer">
+			<a class="text-muted" href="#">Skip animation</a>
+		</footer>
+
+	</body>
+
+	<!-- LOAD ALL JAVASCRIPT RESOURCES -->
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+
+	<!-- npm -->
+	<script type="text/javascript" src="{% static "js/npm.js" %}"></script>
+
+	<!-- typed -->
+	<script type="text/javascript" src="{% static "js/typed.js" %}"></script>
+
+	<!-- parser -->
+	<script type="text/javascript" src="{% static "js/parser.js" %}"></script>
+
+	<!-- index -->
+	<script type="text/javascript" src="{% static "js/index.js" %}"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+</html>
